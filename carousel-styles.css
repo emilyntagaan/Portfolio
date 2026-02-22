@@ -1,0 +1,156 @@
+/* ===================================
+   CAROUSEL — Projects Navigation
+   Add these styles to the bottom of styles.css
+   =================================== */
+
+/* Carousel wrapper replaces .projects-container as the outer element */
+.carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Top controls row: counter + prev/next buttons */
+.carousel-controls-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 0.25rem;
+}
+
+.carousel-counter {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    opacity: 0.75;
+    letter-spacing: 0.04em;
+}
+
+.carousel-nav-btns {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.carousel-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid rgba(193, 232, 153, 0.7);
+    background: white;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(85, 136, 59, 0.1);
+    flex-shrink: 0;
+}
+
+.carousel-nav-btn:hover:not(:disabled) {
+    background: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(85, 136, 59, 0.25);
+}
+
+.carousel-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Viewport: clips overflow during transitions */
+.carousel-viewport {
+    overflow: hidden;
+    border-radius: 4px; /* just enough to clip */
+}
+
+/* The track is the actual grid of cards — same styles as .projects-container */
+.carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    opacity: 1;
+    transform: translateX(0);
+    /* transition is applied dynamically via JS */
+}
+
+/* Dot indicators */
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(85, 136, 59, 0.2);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--primary-green);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.carousel-dot:hover:not(.active) {
+    background: rgba(85, 136, 59, 0.45);
+    transform: scale(1.2);
+}
+
+/* ===================================
+   RESPONSIVE OVERRIDES FOR CAROUSEL
+   =================================== */
+
+@media (max-width: 1024px) {
+    .carousel-track {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .carousel-nav-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .carousel-controls-top {
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .carousel-nav-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .carousel-counter {
+        font-size: 0.75rem;
+    }
+}
