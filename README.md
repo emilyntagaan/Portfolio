@@ -63,6 +63,7 @@ Click the Live Demo link above.
 
 ## File Structure
 
+```
 portfolio/
 ├── index.html
 ├── styles.css
@@ -75,6 +76,7 @@ portfolio/
 │       └── mailchimp-subscribe.js
 ├── images/
 └── README.md
+```
 
 ---
 
