@@ -5,12 +5,12 @@ specializing in Frontend UI Design.
 
 ---
 
-## 🌐 Live Demo
-🔗 https://emilyntagaan.netlify.app/
+## Live Demo
+https://emilyntagaan.netlify.app/
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This portfolio website includes:
 - Home section with profile introduction
@@ -23,21 +23,21 @@ This portfolio website includes:
 
 ---
 
-## 🔌 APIs Used
+## APIs Used
 
 | API | Purpose |
 |-----|---------|
 | **GitHub REST API** | Fetches and displays my public repositories dynamically as a scrollable carousel in the Projects section |
-| **EmailJS** | Powers the contact form — sends messages directly to my inbox without needing a backend server |
-| **Mailchimp** | Newsletter subscription — collects visitor emails via a Netlify serverless function |
+| **EmailJS** | Powers the contact form sends messages directly to my inbox without needing a backend server |
+| **Mailchimp** | Newsletter subscription collects visitor emails via a Netlify serverless function |
 
 ---
 
-## 💳 Transaction Feature
+## Transaction Feature
 
 The **Contact Form** (EmailJS) is the main transaction feature.
 When a visitor submits the form, the data is sent to EmailJS servers
-which deliver it to my email in real time — no backend required.
+which deliver it to my email in real time no backend required.
 
 The **Newsletter Form** (Mailchimp) is the second transaction feature.
 When a visitor enters their email and clicks Subscribe, it is sent
@@ -45,7 +45,7 @@ to my Mailchimp audience list via a serverless Netlify function.
 
 ---
 
-## 🚀 How to Run / View the Project
+## How to Run / View the Project
 
 ### Option 1: View Live
 Click the Live Demo link above.
@@ -61,7 +61,7 @@ Click the Live Demo link above.
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 portfolio/
 ├── index.html
